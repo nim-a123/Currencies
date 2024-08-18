@@ -1,0 +1,282 @@
+body{
+    background-color: rgb(19, 19, 19);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+
+html{
+    scroll-behavior: smooth;
+  }
+  
+  .flex{
+    justify-content: center;
+    display: flex;
+  
+  }
+
+  .grid_main{
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    }
+
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+
+    
+      }
+      
+ 
+  .grid_timeline{
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  .grid_submit{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+  }
+
+  .hidden{
+    display: none;
+  }
+
+  .unselectable {
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+   
+  .content-grid {
+    margin-left: -1rem;
+    --padding-inline: 1rem;
+    --content-max-width: 900px;
+    --breakout-max-width: 1200px;
+    --breakout-size: calc(
+      (var(--breakout-max-width) - var(--content-max-width)) / 2
+    );
+  
+    display: grid;
+  
+    grid-template-columns:
+      [full-width-start] minmax(var(--padding-inline), 1fr)
+      [breakout-start] minmax(0, var(--breakout-size))
+      [content-start] min(
+        100% - (var(--padding-inline) * 2),
+        var(--content-max-width)
+      )
+      [content-end]
+      minmax(0, var(--breakout-size)) [breakout-end]
+      minmax(var(--padding-inline), 1fr) [full-width-end];
+      
+  }
+  
+  .content-grid > :not(.breakout, .full-width),
+  .full-width > :not(.breakout, .full-width) {
+    grid-column: content;
+    
+  }
+  
+  .content-grid > .breakout {
+    
+    grid-column: breakout;
+  }
+  
+  .content-grid > .full-width {
+    grid-column: full-width;
+  
+    display: grid;
+    grid-template-columns: inherit;
+  }
+  
+  img.full-width {
+    width: 100%;
+    max-height: 45vh;
+    object-fit: cover;
+  }
+
+
+
+
+  .Currencies{
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    font-size: 45px;
+    color: rgb(33, 145, 197);
+    margin-bottom: 0;
+
+  }
+
+  .time{
+    text-align: center;
+    margin: auto;
+    margin-top: 25px;
+    font-size: 2rem;
+    color: rgb(143, 143, 143);
+    margin-bottom: 20px;
+ 
+    
+  }
+
+  .Currencies:hover{
+    transition: 0.2s ;
+    text-shadow: 0px 0px 15px rgb(21, 82, 90);
+  }
+
+
+  .box{
+    justify-content: center;
+    margin: auto;
+    width: 250px;
+    height: 200px;
+    border-radius: 20px;
+    background-color: rgb(34, 34, 34);
+    margin: 10px;
+  }
+
+  .box:hover{
+    transition: 0.3s;
+    background-color: rgb(61, 61, 61);
+
+  }
+
+  .flag{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    margin: 15px;
+    margin-top: 0;
+    
+  }
+  .country_shower{
+    font-weight: bolder;
+    font-size: medium;
+    color: rgb(122, 122, 122);
+    margin-top: 5px;
+    margin-right: 15px;
+    text-align: end;
+  }
+.nameofmoney{
+    font-weight: bolder;
+    font-size: medium;
+    color: rgb(255, 255, 255);
+    margin-top: -15px;
+    margin-right: 15px;
+    text-align: end;
+}
+.money_value{
+    text-align: start;
+    font-size: xx-large;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 15px;
+    margin-top: 50px;
+}
+
+
+@media only screen and (max-width: 850px) {
+
+    .grid_main{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    
+        } 
+
+  }
+
+  @media only screen and (max-width: 570px) {
+
+    .grid_main{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        width: 100%;
+        }
+        .box{
+          width: 100%;
+        }
+        .Currencies{
+          font-size: 30px;
+        }
+        .money_value{
+          width: 193%;
+          border-radius: 20px;
+          text-align: center;
+        
+
+      }
+  }
+
+  @media only screen and (max-width: 300px) {
+        .box{
+          width: 100%;
+        }
+        .Currencies{
+          font-size: 30px;
+        }
+        
+    .grid{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+    
+    }
+    .flag{
+      display: grid;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      margin: 15px;
+      margin-top: 0;
+    }
+    .cc{
+      display: flex;
+      justify-content: center;
+      margin: 0;
+    }
+    .country_shower{
+      
+      margin-top: 5px;
+      margin-right: 0;
+      text-align: center;
+    }
+  .nameofmoney{
+    
+      margin-top: 0px;
+      margin-right: 0;
+      text-align: center;
+  }
+  .money_value{
+
+    text-align: center;
+    margin: 0;
+    margin-top: 0;
+      width: auto; 
+      text-align: center;
+
+  }
+}
+  
