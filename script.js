@@ -21,7 +21,7 @@ let time_shower =  document.getElementById('time_shower');
 async function fetchData(){
 
     try{
-        const response = await fetch(`http://api.navasan.tech/latest/?api_key=${key} `);
+        const response = await fetch(`https://api.navasan.tech/latest/?api_key=${key}`);
         if(!response.ok){
             throw new Error("Could not fetch resource");
         }
