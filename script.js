@@ -64,7 +64,7 @@ let Result_exchange = document.getElementById('Result_exchange')
 async function fetchData(){
 
     try{
-        const response = await fetch(`http://api.navasan.tech/latest/?api_key=${key} `);
+        const response = await fetch(`https://api.navasan.tech/latest/?api_key=${key} `);
         if(!response.ok){
             throw new Error("Could not fetch resource");
         }
